@@ -297,6 +297,7 @@ class Cursor extends Base
     /**
      * {@inheritdoc}
      */
+    #[\ReturnTypeWillChange]
     public function getIterator()
     {
         return $this->iassoc();
@@ -305,6 +306,7 @@ class Cursor extends Base
     /**
      * {@inheritdoc}
      */
+    #[\ReturnTypeWillChange]
     public function count()
     {
         return $this->implementation->getNumRows($this->connection, $this->cursor);
