@@ -1,5 +1,5 @@
 {
-    "name": "go/db",
+    "name": "cybermid/go-db",
     "type": "library",
     "description": "Database library",
     "keywords": [
