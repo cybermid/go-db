@@ -246,7 +246,7 @@ class Arr extends Base
     /**
      * {@inheritdoc}
      */
-    public function getIterator()
+    public function getIterator(): \Traversable
     {
         return new \ArrayIterator($this->data);
     }
@@ -254,7 +254,7 @@ class Arr extends Base
     /**
      * {@inheritdoc}
      */
-    public function count()
+    public function count(): int
     {
         return count($this->data);
     }

@@ -23,7 +23,7 @@ final class Col extends Base
     /**
      * {@inheritdoc}
      */
-    public function key()
+    public function key(): mixed
     {
         if (!$this->nextRow) {
             return false;
@@ -34,7 +34,7 @@ final class Col extends Base
     /**
      * {@inheritdoc}
      */
-    public function current()
+    public function current(): mixed
     {
         return $this->nextRow[0];
     }

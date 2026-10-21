@@ -38,7 +38,7 @@ abstract class Base implements \Iterator, \Countable
     /**
      * {@inheritdoc}
      */
-    public function current()
+    public function current(): mixed
     {
         return $this->nextRow;
     }
@@ -47,7 +47,7 @@ abstract class Base implements \Iterator, \Countable
      * {@inheritdoc}
      */
 
-    public function key()
+    public function key(): mixed
     {
         if (!$this->nextRow) {
             return false;
@@ -61,7 +61,7 @@ abstract class Base implements \Iterator, \Countable
     /**
      * {@inheritdoc}
      */
-    public function next()
+    public function next(): void
     {
         $this->pointer++;
     }
@@ -69,7 +69,7 @@ abstract class Base implements \Iterator, \Countable
     /**
      * {@inheritdoc}
      */
-    public function rewind()
+    public function rewind(): void
     {
         if ($this->pointer !== 0) {
             $this->implementation->rewindCursor($this->connection, $this->cursor);
@@ -80,7 +80,7 @@ abstract class Base implements \Iterator, \Countable
     /**
      * {@inheritdoc}
      */
-    public function valid()
+    public function valid(): bool
     {
         $this->nextRow = $this->fetchNextRow();
         return (!empty($this->nextRow));
@@ -89,7 +89,7 @@ abstract class Base implements \Iterator, \Countable
     /**
      * {@inheritdoc}
      */
-    public function count()
+    public function count(): int
     {
         return $this->implementation->getNumRows($this->connection, $this->cursor);
     }

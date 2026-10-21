@@ -46,7 +46,7 @@ class Storage
         } else {
             $message = 'Argument 1 passed to Storage::setInstance must be '.
                 'an instance of go\DB\DB or array, '.gettype($instance).' given';
-            trigger_error($message, E_USER_ERROR);
+            throw new \InvalidArgumentException($message);
         }
         return self::$instance;
     }

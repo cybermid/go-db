@@ -18,7 +18,7 @@ final class Fake extends DB
     /**
      * {@inheritdoc}
      */
-    public function getTable($tableName, array $map = null)
+    public function getTable($tableName, ?array $map = null)
     {
         if (is_object($tableName)) {
             $fake = $tableName;

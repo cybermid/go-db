@@ -26,7 +26,7 @@ class Table
      * @param array $map [optional]
      *        a field map (a field => a real column name)
      */
-    public function __construct(DB $db, $tableName, array $map = null)
+    public function __construct(DB $db, $tableName, ?array $map = null)
     {
         $this->db = $db;
         if ($tableName instanceof IFakeTable) {

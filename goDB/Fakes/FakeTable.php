@@ -20,7 +20,7 @@ class FakeTable implements IFakeTable
      * @param string|string[] $pk [optional]
      * @param int $lastAI [optional]
      */
-    public function __construct(array $data, array $defaults = null, $pk = null, $lastAI = null)
+    public function __construct(array $data, ?array $defaults = null, $pk = null, $lastAI = null)
     {
         $this->data = $data;
         if ($defaults === null) {

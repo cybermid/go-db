@@ -360,7 +360,7 @@ abstract class DB
      * @return \go\DB\Table
      *         a "table" instance
      */
-    public function getTable($tableName, array $map = null)
+    public function getTable($tableName, ?array $map = null)
     {
         if (($map === null) && (is_string($tableName))) {
             if (isset($this->cacheTables[$tableName])) {

@@ -100,7 +100,7 @@ final class Pgsql extends Base
      */
     public function getNumRows($connection, $cursor)
     {
-        return pg_numrows($cursor);
+        return pg_num_rows($cursor);
     }
 
     /**

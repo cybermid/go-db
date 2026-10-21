@@ -23,7 +23,7 @@ final class Objects extends Base
     /**
      * {@inheritdoc}
      */
-    public function current()
+    public function current(): mixed
     {
         return (object)$this->nextRow;
     }

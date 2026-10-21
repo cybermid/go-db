@@ -54,7 +54,6 @@
 ### Поддерживаемые адаптеры
 
  * [mysql](https://github.com/vasa-c/go-db/wiki/Adapters_mysql)
- * [mysqlold](https://github.com/vasa-c/go-db/wiki/Adapters_mysqlold)
  * [sqlite](https://github.com/vasa-c/go-db/wiki/Adapters_sqlite)
  * [pgsql](https://github.com/vasa-c/go-db/wiki/Adapters_pgsql)
 

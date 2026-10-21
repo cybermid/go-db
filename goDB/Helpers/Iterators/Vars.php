@@ -23,7 +23,7 @@ final class Vars extends Base
     /**
      * {@inheritdoc}
      */
-    public function key()
+    public function key(): mixed
     {
         if (!$this->nextRow) {
             return false;
@@ -34,7 +34,7 @@ final class Vars extends Base
     /**
      * {@inheritdoc}
      */
-    public function current()
+    public function current(): mixed
     {
         return array_key_exists('1', $this->nextRow) ? $this->nextRow[1] : $this->nextRow[0];
     }
